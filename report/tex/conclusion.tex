@@ -1,0 +1,53 @@
+\section{Conclusion and Recommendations}\label{sec:conclusion}
+\subsection{Was the model good enough to design against?}
+Yes. The gain and the hover voltage come from one regression that assumes neither, with an rms
+residual of $0.022\ \mathrm{m\,s^{-1}}$ across eight runs spanning a sixfold range of step size,
+and the fitted hover lands on the $2.50\ \mathrm{V}$ midpoint the brief says the simulator uses
+without that value entering the fit. The time constant comes from $1800$ raw position samples and
+is sharp enough that a $2$ percent error multiplies the residual by nine. Four routes to $A$ agree
+inside $0.04$. The decay fit, which cannot hide an error in $A$ inside $T$, puts the time
+constant $3.9$ percent below the step test, which is the one loose end in the identification and is
+carried as such. That same fit predicts its own residual velocity from $A$ and $V_h$ to within
+$0.008\ \mathrm{m\,s^{-1}}$, which is the strongest confirmation of the gain in the report.
+
+The one disagreement is with the parameter-check tool of Appendix~\ref{sec:appendix}, which scored
+the measured values at $54$ and $46$ percent against a target of $60$. It reports a number and no
+reasoning, so it cannot say which of the two is wrong, and nothing in the data supports moving the
+measurement toward it. The model was carried into the design unchanged.
+
+\subsection{Did the controller meet the specifications?}
+The verdicts are in Table~\ref{tab:spec_results}. The design behind them is $K_p = 0.005$ at a
+$7\ \mathrm{m}$ setpoint with the bias trimmed to $2\ \mathrm{mV}$, predicted to overshoot
+$17.3$ percent, hold a $6.0$ percent offset, and stay inside specification at every corner of both
+robustness requirements.
+
+\subsection{What limited the result}
+Two limits are structural rather than experimental, and both would have applied to a perfect
+build.
+
+The first is that the two specifications pull against each other. Overshoot caps the gain through
+$\zeta = 1/(2\sqrt{K_p k A T})$, and this plant has $kAT = 210$, so nothing above
+$9.3\times 10^{-3}$ meets it, while the offset $\Delta V/(K_p k)$ is made large by that same small
+gain. At a $1\ \mathrm{m}$ setpoint with a bias trimmed by eye the floor sits two orders of
+magnitude above the ceiling and no proportional controller exists. What made the design possible
+was reading the specification as written: the $8$ percent is a fraction of the setpoint and the
+brief fixes none, so a larger setpoint relaxes the floor, with the sensor capping it from above.
+
+The second is that proportional control cannot change the decay envelope. From
+Equation~\eqref{eqn:wn_zeta}, $\zeta\omega_n = 1/(2T)$ contains no $K_p$: raising the gain raises
+$\omega_n$ and makes the response ring without making it settle sooner. The settling time of
+roughly $76\ \mathrm{s}$ belongs to the kitticopter, not the controller.
+
+\subsection{Recommendations}
+\begin{enumerate}
+    \item \textbf{Add integral action.} An integrator drives the residual offset to zero and
+    removes the dependence on the bias trim, currently the largest error source in the design.
+    \item \textbf{Compensate rather than raise the gain.} With the envelope fixed at $1/(2T)$, a
+    lead compensator is the only route to a faster response; more $K_p$ spends overshoot margin and
+    buys no settling time.
+    \item \textbf{Replace the bias divider with a reference.} The level shift is trimmed by hand
+    off an unregulated rail, and Figure~\ref{fig:robustness_bias} shows the error is almost
+    entirely proportional to its drift. A two-terminal reference removes both.
+    \item \textbf{Match the difference amplifier resistors.} Four $10$ percent parts set the
+    common-mode rejection of each difference stage, which no trimmer corrects.
+\end{enumerate}

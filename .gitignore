@@ -1,0 +1,35 @@
+# LaTeX build products
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+report/main.pdf
+
+# MATLAB and Simulink
+slprj/
+*.slxc
+*.asv
+
+# SPICE and KiCad run output
+*.raw
+*.op.raw
+erc.rpt
+*-backups/
+_autosave-*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# AI tooling
+CLAUDE.md
+DESIGN.md
+.claude/
+.mcp.json
+.playwright-mcp/

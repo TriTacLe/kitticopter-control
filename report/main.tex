@@ -1,0 +1,80 @@
+% EEE3094S Lab 2 report. Rules from the 2026 brief, keep them in view:
+%   15 pages max excluding cover, contents and appendices. 10 percent penalty over.
+%   A 10 page report is what the brief calls perfect for this scope.
+%   No photos of handwritten work, no Excel plots.
+%   Every figure captioned, annotated, and referred to in the text.
+%   Demo screenshot of the controller tracking the setpoint goes in the appendix.
+%   Sections below match the rubric: System Identification 20, Controller Design,
+%   Controller Tests, and the modelling that feeds them.
+% Build: latexmk -pdf main.tex
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[top=0.9in, bottom=0.9in, left=0.95in, right=0.95in]{geometry}
+
+\linespread{1.0}
+\setlength{\parskip}{5pt plus2pt minus1pt}
+
+\widowpenalty 10000
+\clubpenalty 10000
+
+\newcommand{\eat}[1]{}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[official]{eurosym}
+\usepackage{enumitem}
+\setlist{nolistsep,noitemsep}
+\usepackage[hidelinks]{hyperref}
+
+% pack floats with text instead of letting them take whole pages
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.80}
+\renewcommand{\textfraction}{0.06}
+\renewcommand{\floatpagefraction}{0.85}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+
+% tighter display-equation and float spacing, to stay inside the 15 page limit
+\setlength{\abovedisplayskip}{5pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{5pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{3pt plus 1pt minus 1pt}
+\setlength{\belowdisplayshortskip}{3pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+
+% Bibliography needs biber, which is not installed on this machine. Uncomment both
+% lines plus % \printbibliography below once you actually cite something.
+% \usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+% \addbibresource{Bibliography.bib}
+
+\begin{document}
+
+\include{tex/titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic}
+
+\input{tex/introduction}
+\input{tex/system_modelling}
+\include{tex/system_id}
+\include{tex/design}
+\include{tex/tests}
+\include{tex/conclusion}
+
+\appendix
+\include{tex/appendix}
+
+% \printbibliography
+
+\end{document}

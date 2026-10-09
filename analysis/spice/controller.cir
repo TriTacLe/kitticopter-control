@@ -1,0 +1,41 @@
+* Kitticopter proportional controller, three UA741 stages
+* Stage 1 difference amp: Ve = Vref - Vfb,  four 10k
+* Stage 2 inverting gain: -Kp = -Rf/Rin = -500/100k = -0.005
+* Stage 3 difference amp as level shift: Vout = Vbias - (-Kp Ve) = Vbias + Kp Ve
+.include ua741.sub
+
+Vpos  vcc 0 DC  15
+Vneg  vee 0 DC -15
+
+* inputs: setpoint 7 m -> 6.65 V through k, feedback swept
+Vref  ref 0 DC 6.65
+Vfb   fb  0 DC 0
+
+* --- stage 1, difference amplifier ---
+R1 ref n1p 10k
+R2 n1p 0   10k
+R3 fb  n1n 10k
+R4 n1n e   10k
+X1 n1p n1n vcc vee e ua741
+
+* --- stage 2, inverting attenuator, Kp = 500/100k ---
+R5 e   n2n 100k
+R6 n2n g   500
+X2 0 n2n vcc vee g ua741
+
+* --- bias divider off +15 V, 5k6 + 1k trim + 1k2, loaded by stage 3 ---
+R7 vcc bi 5650
+R8 bi  0  1200
+
+* --- stage 3, difference amplifier as level shifter ---
+R9  bi  n3p 10k
+R10 n3p 0   10k
+R11 g   n3n 10k
+R12 n3n out 10k
+X3 n3p n3n vcc vee out ua741
+
+.control
+dc Vfb 0 7.6 0.1
+print v(e) v(g) v(out) > spice_sweep.txt
+.endc
+.end

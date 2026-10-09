@@ -1,0 +1,47 @@
+* Kitticopter proportional controller, Kp = 0.005
+* Open in LTspice with File > Open, then Simulate > Run.
+* Three UA741 stages: difference, inverting attenuator, difference as level shift.
+*
+* Behavioural UA741: 200k open loop gain, 5 Hz dominant pole (1 MHz GBW), 75 ohm out.
+.subckt ua741 inp inn vcc vee out
+Rin   inp inn 2MEG
+Egain a 0 inp inn 200k
+Rp    a b 1MEG
+Cp    b 0 31.83nF
+Eout  c 0 b 0 1
+Rout  c out 75
+.ends ua741
+
+Vpos vcc 0 DC  15
+Vneg vee 0 DC -15
+
+* setpoint 6.65 V is a 7 m command through k = 0.95
+Vref ref 0 DC 6.65
+* feedback swept from the ground up to past the setpoint
+Vfb  fb  0 DC 0
+
+* --- stage 1, difference amplifier: Ve = Vref - Vfb ---
+R1 ref n2 10k
+R2 n2  0  10k
+R3 fb  n1 10k
+R4 n1  e  10k
+X1 n2 n1 vcc vee e ua741
+
+* --- stage 2, inverting attenuator: Kp = 500 / 100k = 0.005 ---
+R5 e   n3 100k
+R6 n3  g  500
+X2 0 n3 vcc vee g ua741
+
+* --- bias divider, 5k65 over 1k2, loaded by stage 3 ---
+R7 vcc bi 5650
+R8 bi  0  1200
+
+* --- stage 3, difference amplifier as level shift: Vcmd = Vbias + Kp*Ve ---
+R9  bi n5  10k
+R10 n5 0   10k
+R11 g  n4  10k
+R12 n4 cmd 10k
+X3 n5 n4 vcc vee cmd ua741
+
+.dc Vfb 0 7.6 0.05
+.end

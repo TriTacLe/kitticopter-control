@@ -1,0 +1,80 @@
+\section{Controller Tests}\label{sec:tests}
+This section reports what the built controller did on the system, measured against the four
+specifications of Section~\ref{sec:design}.
+
+\subsection{Tests performed}
+Four tests cover the specifications, and each one produces a single number that decides a pass
+or a fail.
+
+\begin{enumerate}
+    \item \textbf{Setpoint step.} The setpoint is stepped and the response is logged until it
+    settles. The trace gives both the steady-state offset as a fraction of the step, which tests
+    the $8$ percent tracking specification, and the peak against the final value, which tests
+    the $30$ percent overshoot specification.
+    \item \textbf{Repeated steps at different setpoints.} Confirms the behaviour is not specific
+    to one operating point, and exposes any asymmetry between upward and downward steps caused
+    by the input clipping at $0$ and $5\ \mathrm{V}$.
+    \item \textbf{Gain variation.} The plant cannot be varied, so the trimpot is moved $\pm 10$
+    percent about the design value and the step is repeated at each extreme. This covers the
+    component tolerance specification directly and stands in for the $10$ percent uncertainty in
+    the aerodynamic constant, since both enter the closed-loop denominator through the product
+    $K_p k A$.
+    \item \textbf{Demonstration.} The standard step testing process run with Mr De Maar, with a
+    screenshot of the controller tracking the setpoint recorded for
+    Appendix~\ref{sec:appendix}.
+\end{enumerate}
+
+Each test has a predicted value computed before the bench session, so that the comparison is a
+test of the design rather than a description of whatever happened. Table~\ref{tab:predictions}
+lists them.
+
+\begin{table}[htbp]
+\centering
+\caption{Predicted results at $K_p = 0.005$ and a $7\ \mathrm{m}$ setpoint, from the simulation
+of Section~\ref{sec:design}. A bench result outside these bands means the model is wrong, not the
+controller.}
+\label{tab:predictions}
+\begin{tabular}{lrrr}
+\toprule
+Quantity & Nominal & At $K_p -10\%$ & At $K_p +10\%$ \\
+\midrule
+Steady-state offset (\%) & 6.0 & 7.5 & 5.0 \\
+Overshoot (\%)           & 17.3 & 13.0 & 21.0 \\
+$2$ percent settling time (s) & 76 & 61 & 71 \\
+Peak height (m)          & 8.21 & 7.91 & 8.47 \\
+Command range (V)        & \multicolumn{3}{c}{2.49 to 2.54, no saturation} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The command range matters as much as the response. The design only holds while the command stays
+inside $0$ to $5\ \mathrm{V}$, and at this gain it moves barely $50\ \mathrm{mV}$ from the hover
+bias, so any clipping seen on the bench would indicate a wiring or bias fault rather than a
+design limit.
+
+% Awaiting session 2: logged step responses, the measured offset and overshoot at each gain
+% setting, and the demo screenshot.
+
+\subsection{Performance evaluation}
+Each specification is reported as a pass or a fail with the measured number that decides it.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llll}
+\toprule
+\textbf{Specification} & \textbf{Test} & \textbf{Measured} & \textbf{Verdict} \\
+\midrule
+Tracking error below 8\%     & Setpoint step       & & \\
+Overshoot below 30\%         & Same trace          & & \\
+10\% uncertainty in $b$      & Gain varied $\pm$10\% & & \\
+10\% component tolerance     & Gain varied $\pm$10\% & & \\
+\bottomrule
+\end{tabular}
+\caption{Measured performance against each specification. Completed from the session 2 traces.}
+\label{tab:spec_results}
+\end{table}
+
+Any departure from the prediction is attributed to one of three causes: an error in the identified
+parameters, a difference between the designed and the built gain, or input saturation taking the
+loop outside the linear range. Saturation is checked first, since it is the only one that can be
+ruled in or out from the command trace alone.

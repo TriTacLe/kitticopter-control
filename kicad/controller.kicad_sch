@@ -1,0 +1,2653 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8d76b751-53a9-40a0-9d07-3ddff3912847")
+	(paper "A3")
+	(title_block
+		(title "Kitticopter proportional controller, Kp = 0.005")
+		(company "EEE3094S Lab 2")
+	)
+	(lib_symbols
+(symbol "Amplifier_Operational:LM741"
+		(pin_names
+			(offset 0.127)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 0 6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LM741"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 1.27 1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm741.pdf"
+			(at 3.81 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Operational Amplifier, DIP-8/TO-99-8"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "single opamp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TSSOP*3x3mm*P0.65mm*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LM741_0_1"
+			(polyline
+				(pts
+					(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM741_1_1"
+			(pin input line
+				(at 0 -7.62 90)
+				(length 5.08)
+				(name "NULL"
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -2.54 -7.62 90)
+				(length 3.81)
+				(name "V-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 2.54 -7.62 90)
+				(length 6.35)
+				(name "NULL"
+					(effects
+						(font
+							(size 0.508 0.508)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at -2.54 7.62 270)
+				(length 3.81)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 0 2.54 270)
+				(length 2.54)
+				(hide yes)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:R"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "R"
+			(at 2.032 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R"
+			(at 0 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at -1.778 0 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "R res resistor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "R_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "R_0_1"
+			(rectangle
+				(start -1.016 -2.54)
+				(end 1.016 2.54)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "R_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 1.27)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Device:C"
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0.254)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "C"
+			(at 0.635 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 0.635 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 0.9652 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "cap capacitor"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "C_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "C_0_1"
+			(polyline
+				(pts
+					(xy -2.032 0.762) (xy 2.032 0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.032 -0.762) (xy 2.032 -0.762)
+				)
+				(stroke
+					(width 0.508)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "C_1_1"
+			(pin passive line
+				(at 0 3.81 270)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.794)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "power:+15V"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+15V"
+			(at 0 3.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+15V\""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "+15V_0_1"
+			(polyline
+				(pts
+					(xy -0.762 1.27) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 2.54) (xy 0.762 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 2.54)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "+15V_1_1"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "power:-15V"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#PWR"
+			(at 0 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "-15V"
+			(at 0 3.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"-15V\""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "-15V_0_0"
+			(pin power_in line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "-15V_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy 0.762 1.27) (xy 0 2.54) (xy -0.762 1.27) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "power:GND"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#PWR"
+			(at 0 -6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 0 -3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "global power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "GND_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "GND_1_1"
+			(pin power_in line
+				(at 0 0 270)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "power:PWR_FLAG"
+		(power global)
+		(pin_numbers
+			(hide yes)
+		)
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "#FLG"
+			(at 0 1.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 0 3.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "flag power"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_0"
+			(pin power_out line
+				(at 0 0 90)
+				(length 0)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "PWR_FLAG_0_1"
+			(polyline
+				(pts
+					(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Connector_Generic:Conn_01x04"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 0 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Conn_01x04_1_1"
+			(rectangle
+				(start -1.27 3.81)
+				(end 1.27 -6.35)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 2.667)
+				(end 0 2.413)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -4.953)
+				(end 0 -5.207)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 2.54 0)
+				(length 3.81)
+				(name "Pin_1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "Pin_2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "Pin_3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -5.08 0)
+				(length 3.81)
+				(name "Pin_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 30.48 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "31cd903e-f855-4592-b1ea-744ba8df3948")
+		(pin "1" (uuid "2faaedd0-3565-4dc0-8369-0b84b781331f"))
+		(pin "2" (uuid "46d28268-49de-497a-80b5-c0a9a9029f90"))
+		(property "Reference" "R1"
+			(at 33.68 36.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 33.68 39.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R1") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 30.48 34.29) (xy 30.48 29.21))
+		(stroke (width 0) (type solid))
+		(uuid "d42ae5cc-edac-4af9-a102-ea06e0587688")
+	)
+	(label "VREF"
+		(at 30.48 29.21 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "0be483a3-164c-4a08-8ac3-9d501b02af05")
+	)
+	(wire
+		(pts (xy 30.48 41.910000000000004) (xy 30.48 46.99))
+		(stroke (width 0) (type solid))
+		(uuid "6f8b1b1a-cfad-465a-9e9d-a09d8cfc8025")
+	)
+	(label "n2"
+		(at 30.48 46.99 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "41e803bb-c531-400a-b81e-a25b7030bb23")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 49.53 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2a679989-b89d-4ec6-b420-aff28118c13a")
+		(pin "1" (uuid "1f40c729-5a7d-45a3-b613-3dd6a2e56650"))
+		(pin "2" (uuid "3f2144b4-c110-40e7-a360-263231804bb6"))
+		(property "Reference" "R2"
+			(at 52.730000000000004 36.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 52.730000000000004 39.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R2") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 49.53 34.29) (xy 49.53 29.21))
+		(stroke (width 0) (type solid))
+		(uuid "6c9c404a-f813-40c8-9404-8abcfcb96cdc")
+	)
+	(label "n2"
+		(at 49.53 29.21 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "e54a3c9b-4172-4159-8ed0-42b513cd4c61")
+	)
+	(wire
+		(pts (xy 49.53 41.910000000000004) (xy 49.53 46.99))
+		(stroke (width 0) (type solid))
+		(uuid "4e1559b1-138b-44e0-8bf7-9afbc8b6e2c9")
+	)
+	(label "GND"
+		(at 49.53 46.99 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "41303c5f-3cbc-42e5-af1f-789fb86d294c")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 68.58 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3dd0706-cfe2-41a9-b63a-150e77e300ce")
+		(pin "1" (uuid "2b511620-0af8-45fd-ada7-8f9b41c8921b"))
+		(pin "2" (uuid "4c6a1591-0e11-45eb-88b7-46126f889e87"))
+		(property "Reference" "R3"
+			(at 71.78 36.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 71.78 39.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R3") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 68.58 34.29) (xy 68.58 29.21))
+		(stroke (width 0) (type solid))
+		(uuid "86b446ba-cfd1-4e07-a5aa-0e0939e94ba1")
+	)
+	(label "VFB"
+		(at 68.58 29.21 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "c7257d6f-54ee-477d-ac90-9aba82f1a13f")
+	)
+	(wire
+		(pts (xy 68.58 41.910000000000004) (xy 68.58 46.99))
+		(stroke (width 0) (type solid))
+		(uuid "741979c0-a344-4cf9-9e41-1b60b416401b")
+	)
+	(label "n1"
+		(at 68.58 46.99 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "9565d25b-3d0e-40a2-b3af-d3c7191749f1")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 87.63000000000001 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b1460ed8-86d1-4b74-a503-70906a84d6e1")
+		(pin "1" (uuid "fcac27f1-ed26-4d6c-b998-93789485c4f9"))
+		(pin "2" (uuid "0ebdbfb3-32ea-433f-a803-050e3e952c97"))
+		(property "Reference" "R4"
+			(at 90.83000000000001 36.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 90.83000000000001 39.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R4") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 87.63000000000001 34.29) (xy 87.63000000000001 29.21))
+		(stroke (width 0) (type solid))
+		(uuid "dbe1fcd8-48f0-49ec-b6e7-ac4fcd8f56a2")
+	)
+	(label "n1"
+		(at 87.63000000000001 29.21 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "01d95886-9576-4b78-bd40-441ebfb79e77")
+	)
+	(wire
+		(pts (xy 87.63000000000001 41.910000000000004) (xy 87.63000000000001 46.99))
+		(stroke (width 0) (type solid))
+		(uuid "61fd08be-774e-44fd-88fd-b103daa12d8e")
+	)
+	(label "VE"
+		(at 87.63000000000001 46.99 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "bd73c080-48b2-4308-a95d-984f44bddad2")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5ba16b4-96f8-4870-a02a-7e975cdd7589")
+		(pin "1" (uuid "3beb013d-6a91-4c64-b2a5-39fa10021da7"))
+		(pin "2" (uuid "5c71642d-8514-4045-a1a7-d253248ffcd2"))
+		(property "Reference" "R5"
+			(at 109.88000000000001 36.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "100k"
+			(at 109.88000000000001 39.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R5") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 106.68 34.29) (xy 106.68 29.21))
+		(stroke (width 0) (type solid))
+		(uuid "1f7c3c6a-8a1d-4f4a-832b-dde67d1d7965")
+	)
+	(label "VE"
+		(at 106.68 29.21 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "60031930-f1c0-49cf-83fb-d3472eb2f412")
+	)
+	(wire
+		(pts (xy 106.68 41.910000000000004) (xy 106.68 46.99))
+		(stroke (width 0) (type solid))
+		(uuid "644bba79-be9e-4cf7-8a45-d8e6f4d77e07")
+	)
+	(label "n3"
+		(at 106.68 46.99 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "97b68e65-25b2-47f1-8397-f5559235aaae")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 125.73 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a601b8c7-94fd-422e-b943-e43a0e772974")
+		(pin "1" (uuid "7d38ee67-bd5c-4f4d-90c0-0ccbe4e52dd0"))
+		(pin "2" (uuid "5bbdab7d-5429-4c41-9aa2-f0dfc02f2221"))
+		(property "Reference" "RV1"
+			(at 128.93 36.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "1k trim"
+			(at 128.93 39.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "RV1") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 125.73 34.29) (xy 125.73 29.21))
+		(stroke (width 0) (type solid))
+		(uuid "fa751fed-5333-4a06-aa62-c972124c2ffe")
+	)
+	(label "n3"
+		(at 125.73 29.21 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "404ae2ac-6ab9-443e-b062-34e424802d33")
+	)
+	(wire
+		(pts (xy 125.73 41.910000000000004) (xy 125.73 46.99))
+		(stroke (width 0) (type solid))
+		(uuid "74d636e9-2d5a-4f65-8711-8696777121da")
+	)
+	(label "VG"
+		(at 125.73 46.99 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "513efd61-3cdf-46a8-aa90-d785aecf1f40")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 144.78 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "979610f6-dd5c-4eb3-954d-4843453544ea")
+		(pin "1" (uuid "35fd8e00-baaf-49dc-97bd-e4f40306fe8a"))
+		(pin "2" (uuid "e71a69b4-a83b-4816-940a-90371a9cf7ee"))
+		(property "Reference" "R7"
+			(at 147.98 36.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "4k7"
+			(at 147.98 39.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R7") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 144.78 34.29) (xy 144.78 29.21))
+		(stroke (width 0) (type solid))
+		(uuid "cbe7b517-377c-4487-8ab7-cd54e41aba75")
+	)
+	(label "+15V"
+		(at 144.78 29.21 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "6b3a1199-e74d-4f2f-990d-6183ad722787")
+	)
+	(wire
+		(pts (xy 144.78 41.910000000000004) (xy 144.78 46.99))
+		(stroke (width 0) (type solid))
+		(uuid "dfeb7074-a481-44f6-8a02-1f639870b320")
+	)
+	(label "n6"
+		(at 144.78 46.99 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "526e353e-81db-4fea-8571-eeb41b9b05bd")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 30.48 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9f04f3e6-5840-4de3-864f-67d238a5de4e")
+		(pin "1" (uuid "1732dadb-1d9b-46de-bdf6-b4492bd70954"))
+		(pin "2" (uuid "eb6457f8-737f-4e15-b762-180f75e3b5fc"))
+		(property "Reference" "RV2"
+			(at 33.68 74.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "2k trim"
+			(at 33.68 77.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "RV2") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 30.48 72.39) (xy 30.48 67.31))
+		(stroke (width 0) (type solid))
+		(uuid "4cb4b8cb-4950-4608-b153-23f089e92e0e")
+	)
+	(label "n6"
+		(at 30.48 67.31 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "980aa47c-9b23-4d6e-bd75-7a2e47212722")
+	)
+	(wire
+		(pts (xy 30.48 80.01) (xy 30.48 85.09))
+		(stroke (width 0) (type solid))
+		(uuid "88ddcfb6-cf6e-4155-8199-fcba9ffc0142")
+	)
+	(label "VBIAS"
+		(at 30.48 85.09 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "9293df13-400d-42d9-b516-2e3a0ad56256")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 49.53 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f8eda57c-7d28-47a3-8956-fecdc68560c1")
+		(pin "1" (uuid "ebe392fc-5083-41c1-92bb-5eaa4306bf50"))
+		(pin "2" (uuid "d49e08f4-ceec-4576-a144-e465162749a4"))
+		(property "Reference" "R8"
+			(at 52.730000000000004 74.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "1k2"
+			(at 52.730000000000004 77.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R8") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 49.53 72.39) (xy 49.53 67.31))
+		(stroke (width 0) (type solid))
+		(uuid "3e61145f-0cf9-4a92-9fd4-b6b076ca53ca")
+	)
+	(label "VBIAS"
+		(at 49.53 67.31 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "845a13ab-a934-4da2-a541-ee9d4deb0ce1")
+	)
+	(wire
+		(pts (xy 49.53 80.01) (xy 49.53 85.09))
+		(stroke (width 0) (type solid))
+		(uuid "42cde232-6b10-42db-96cb-4f3daad75475")
+	)
+	(label "GND"
+		(at 49.53 85.09 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "5352220d-6638-4b42-a37d-6d90a3d5feb3")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 68.58 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0e238a0f-5934-47e4-8d0c-33e55c17983b")
+		(pin "1" (uuid "8b16c59d-68ab-420b-869e-2950dc8dc2a5"))
+		(pin "2" (uuid "3b47f19b-a64d-4fdf-b30e-888592bbd6c2"))
+		(property "Reference" "R9"
+			(at 71.78 74.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 71.78 77.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R9") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 68.58 72.39) (xy 68.58 67.31))
+		(stroke (width 0) (type solid))
+		(uuid "e334494c-e2f6-4cb0-b043-b3fafbc7f34e")
+	)
+	(label "VBIAS"
+		(at 68.58 67.31 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "ce891479-8c05-4b41-a7b2-eee8b4a54dc3")
+	)
+	(wire
+		(pts (xy 68.58 80.01) (xy 68.58 85.09))
+		(stroke (width 0) (type solid))
+		(uuid "2444c368-dc6c-4e6d-9d60-4baa911fc2d1")
+	)
+	(label "n5"
+		(at 68.58 85.09 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "34a2110b-9c52-4a80-b9bd-8d5559c28ac4")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 87.63000000000001 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f5904572-5de1-4b4c-a66c-64e53d815b56")
+		(pin "1" (uuid "d8913778-a192-4914-8b2b-796e21eb387a"))
+		(pin "2" (uuid "0ed58008-a75d-427c-9748-fbc3e365b9cd"))
+		(property "Reference" "R10"
+			(at 90.83000000000001 74.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 90.83000000000001 77.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R10") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 87.63000000000001 72.39) (xy 87.63000000000001 67.31))
+		(stroke (width 0) (type solid))
+		(uuid "da320520-3389-465c-a81f-6c194408085f")
+	)
+	(label "n5"
+		(at 87.63000000000001 67.31 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "bd93976f-dd7b-4aca-b0ef-30e43f03e19d")
+	)
+	(wire
+		(pts (xy 87.63000000000001 80.01) (xy 87.63000000000001 85.09))
+		(stroke (width 0) (type solid))
+		(uuid "c7cebf88-26aa-4be4-b524-e8975f984b34")
+	)
+	(label "GND"
+		(at 87.63000000000001 85.09 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "ca0144df-e8d5-449f-8dbb-28fbe86f8dd9")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "64c43c6c-e7fd-4449-8912-c0fa8a63dd99")
+		(pin "1" (uuid "c82ecaa4-c119-418b-ad6a-3c0d9aabbae5"))
+		(pin "2" (uuid "4fb4c1ce-bf03-4c8b-9679-a688567acd60"))
+		(property "Reference" "R11"
+			(at 109.88000000000001 74.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 109.88000000000001 77.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R11") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 106.68 72.39) (xy 106.68 67.31))
+		(stroke (width 0) (type solid))
+		(uuid "717360d4-3bcd-4054-a534-1d6275bec20d")
+	)
+	(label "VG"
+		(at 106.68 67.31 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "a710dd9a-93ff-42e6-9aa3-3fa48f997323")
+	)
+	(wire
+		(pts (xy 106.68 80.01) (xy 106.68 85.09))
+		(stroke (width 0) (type solid))
+		(uuid "59517213-8e7d-4f91-8638-fc5c87113701")
+	)
+	(label "n4"
+		(at 106.68 85.09 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "60a439d7-c2b5-402f-bcd1-0c7a8e86a696")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 125.73 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "829420ad-e6c0-476c-979b-cd04815ab182")
+		(pin "1" (uuid "c5f55162-8d8b-4e2d-b2be-7207a12a43ab"))
+		(pin "2" (uuid "ac73d991-4083-4bcc-9be0-783f79ec6c2b"))
+		(property "Reference" "R12"
+			(at 128.93 74.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "10k"
+			(at 128.93 77.7 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "R12") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 125.73 72.39) (xy 125.73 67.31))
+		(stroke (width 0) (type solid))
+		(uuid "8a91f483-bc6d-4e29-8f5a-a46f9c61099b")
+	)
+	(label "n4"
+		(at 125.73 67.31 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "59653368-f091-425e-a0ce-d3c0e93e4cf1")
+	)
+	(wire
+		(pts (xy 125.73 80.01) (xy 125.73 85.09))
+		(stroke (width 0) (type solid))
+		(uuid "ce5e27b1-311a-4286-9226-21d8b8ebbd75")
+	)
+	(label "VCMD"
+		(at 125.73 85.09 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "3e68112b-e36f-4bfb-a19f-4ea9406fad97")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:LM741")
+		(at 45.72 127.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9990f81a-f30c-417c-bdf8-a259d05fddaa")
+		(pin "1" (uuid "09a689e0-03f4-4cc4-8dfb-afe46c196b1b"))
+		(pin "2" (uuid "e28d6adb-1785-4b83-9116-fa537c94219c"))
+		(pin "3" (uuid "fbaadde1-c978-436b-ac3a-0a464b8ab63d"))
+		(pin "4" (uuid "deebaf84-dcad-451c-9e9c-e33b7a0ef8fd"))
+		(pin "5" (uuid "bd4ad0e1-1952-4470-b2e8-2dc4fde75b5b"))
+		(pin "6" (uuid "67195925-f822-4743-8bf8-649d36ea7480"))
+		(pin "7" (uuid "1fefe564-f18d-4b7c-a253-b7383d33a44b"))
+		(pin "8" (uuid "80d5bb5e-dd89-4484-8c96-4af5e241c575"))
+		(property "Reference" "U1"
+			(at 48.92 125.5 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "UA741"
+			(at 48.92 128.5 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "U1") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 38.1 129.54) (xy 27.939999999999998 129.54))
+		(stroke (width 0) (type solid))
+		(uuid "db034bc7-6024-47f6-8f48-5d8abd6b2c82")
+	)
+	(label "n1"
+		(at 27.939999999999998 129.54 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "5d70d3ac-1c52-48d2-b788-a789aeac2f57")
+	)
+	(wire
+		(pts (xy 38.1 124.46) (xy 27.939999999999998 124.46))
+		(stroke (width 0) (type solid))
+		(uuid "1946b9a7-2c0f-4911-a90a-35a274149cc4")
+	)
+	(label "n2"
+		(at 27.939999999999998 124.46 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "9b3343ff-a380-4ede-b0a5-4d2020620976")
+	)
+	(wire
+		(pts (xy 53.339999999999996 127.0) (xy 60.96 127.0))
+		(stroke (width 0) (type solid))
+		(uuid "0989fc8c-6bc8-4191-8eac-6c2ef14bca7b")
+	)
+	(label "VE"
+		(at 60.96 127.0 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "d2f18e3e-ee0e-4bdb-840c-e932fb8238ed")
+	)
+	(no_connect
+		(at 45.72 134.62)
+		(uuid "114727f2-1c28-4678-81d3-d17c673c1c52")
+	)
+	(no_connect
+		(at 48.26 134.62)
+		(uuid "c8e41c6c-d118-49fc-ba27-66a1cd52d67f")
+	)
+	(wire
+		(pts (xy 43.18 119.38) (xy 43.18 111.76))
+		(stroke (width 0) (type solid))
+		(uuid "de217eea-2b71-47f9-afe7-0b5752e27399")
+	)
+	(label "+15V"
+		(at 43.18 111.76 90)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "c5364257-8447-4116-9521-7eea41422675")
+	)
+	(wire
+		(pts (xy 43.18 134.62) (xy 43.18 142.24))
+		(stroke (width 0) (type solid))
+		(uuid "dc71e731-3537-4611-913d-7838d9ae8f95")
+	)
+	(label "-15V"
+		(at 43.18 142.24 270)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "792e0970-2221-412b-9c92-eabe2550f6e6")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:LM741")
+		(at 101.6 127.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72148b92-9b4d-4cbc-a03c-0929d8d95e0c")
+		(pin "1" (uuid "3468ef48-6f69-4e9a-8a10-1f5e35129b6c"))
+		(pin "2" (uuid "0e882430-3b45-4313-974b-cb8f2dc45a9d"))
+		(pin "3" (uuid "179b1c5a-44fb-4fd5-9107-1a33c63418c9"))
+		(pin "4" (uuid "5ecad5a7-206d-47ec-a8bd-d37fb80bfe29"))
+		(pin "5" (uuid "0206e726-c7f3-4052-93f9-a7301f65babb"))
+		(pin "6" (uuid "ebddba3e-d16a-4c22-9e11-573fc516d94e"))
+		(pin "7" (uuid "8f828821-4859-40f7-b823-6d620b5a3f9f"))
+		(pin "8" (uuid "c5cb27f4-9542-49a8-8c88-fdf52668080a"))
+		(property "Reference" "U2"
+			(at 104.8 125.5 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "UA741"
+			(at 104.8 128.5 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "U2") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 93.97999999999999 129.54) (xy 83.82 129.54))
+		(stroke (width 0) (type solid))
+		(uuid "07381bd5-8d99-4c2b-b072-c9b9d00b2fc3")
+	)
+	(label "n3"
+		(at 83.82 129.54 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "633d6eb3-cd24-48de-b2ff-5c2e5bd2079c")
+	)
+	(wire
+		(pts (xy 93.97999999999999 124.46) (xy 83.82 124.46))
+		(stroke (width 0) (type solid))
+		(uuid "42948988-8e3c-401e-acfb-3b1eb54721b1")
+	)
+	(label "GND"
+		(at 83.82 124.46 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "cb70b049-f96b-4034-916a-766f42430797")
+	)
+	(wire
+		(pts (xy 109.22 127.0) (xy 116.83999999999999 127.0))
+		(stroke (width 0) (type solid))
+		(uuid "dda14666-ef62-452a-8349-a96f8b5ce2c6")
+	)
+	(label "VG"
+		(at 116.83999999999999 127.0 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "05754969-4ff5-436e-9f39-f3ce5ef7f5a1")
+	)
+	(no_connect
+		(at 101.6 134.62)
+		(uuid "e48a35d5-5750-4b98-afff-f3645dd28992")
+	)
+	(no_connect
+		(at 104.14 134.62)
+		(uuid "7b663828-ef21-4276-8504-c8dfbde86476")
+	)
+	(wire
+		(pts (xy 99.05999999999999 119.38) (xy 99.05999999999999 111.76))
+		(stroke (width 0) (type solid))
+		(uuid "aa9dd785-3f71-4370-a378-8a818a15aefd")
+	)
+	(label "+15V"
+		(at 99.05999999999999 111.76 90)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "8a43e294-0195-4df0-84f5-349842803704")
+	)
+	(wire
+		(pts (xy 99.05999999999999 134.62) (xy 99.05999999999999 142.24))
+		(stroke (width 0) (type solid))
+		(uuid "f856bbc6-2e8e-4c47-95c6-a368485f2038")
+	)
+	(label "-15V"
+		(at 99.05999999999999 142.24 270)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "1aedfd8c-99f8-4af0-985c-a710067e169e")
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:LM741")
+		(at 157.48000000000002 127.0 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a8a0b47c-8d6c-4a1f-a4db-c2877812b286")
+		(pin "1" (uuid "d0c29834-2f3a-4662-bb93-0e80a8cb17ce"))
+		(pin "2" (uuid "d817462f-6d07-4293-bf1c-b21341559e88"))
+		(pin "3" (uuid "addf9b13-99d6-44f3-8562-641d26009a6c"))
+		(pin "4" (uuid "52e6fe06-6894-4c68-bd47-5a8a595dcb20"))
+		(pin "5" (uuid "c8efa942-fb7a-4688-bfb3-364d7e7cc49c"))
+		(pin "6" (uuid "21bb745e-7136-48e5-b4d3-f7ec86bdc490"))
+		(pin "7" (uuid "77bf551a-febf-45be-bece-fbc32429ddee"))
+		(pin "8" (uuid "9fd0f7d6-7c29-4935-977c-f895e0abb67c"))
+		(property "Reference" "U3"
+			(at 160.68 125.5 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "UA741"
+			(at 160.68 128.5 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "U3") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 149.86 129.54) (xy 139.70000000000002 129.54))
+		(stroke (width 0) (type solid))
+		(uuid "7d797a09-9cd6-4537-a886-9745a40496b5")
+	)
+	(label "n4"
+		(at 139.70000000000002 129.54 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "a16d08b8-41ce-42fa-960e-cd2325d3e9ad")
+	)
+	(wire
+		(pts (xy 149.86 124.46) (xy 139.70000000000002 124.46))
+		(stroke (width 0) (type solid))
+		(uuid "ceb8f632-4a55-461b-bcc2-08ede55c53e8")
+	)
+	(label "n5"
+		(at 139.70000000000002 124.46 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "286f9569-9376-4443-93ac-bbc0d2b8bcbe")
+	)
+	(wire
+		(pts (xy 165.10000000000002 127.0) (xy 172.72000000000003 127.0))
+		(stroke (width 0) (type solid))
+		(uuid "bcf93be2-7b4d-4b10-b009-42dc1d4fde12")
+	)
+	(label "VCMD"
+		(at 172.72000000000003 127.0 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "ff0cd3a9-934f-4ff8-89c2-74e4874fb46b")
+	)
+	(no_connect
+		(at 157.48000000000002 134.62)
+		(uuid "2187adae-1208-46f9-845b-a02863c6751e")
+	)
+	(no_connect
+		(at 160.02 134.62)
+		(uuid "027b1514-a30a-4437-89c2-e99e20358c71")
+	)
+	(wire
+		(pts (xy 154.94000000000003 119.38) (xy 154.94000000000003 111.76))
+		(stroke (width 0) (type solid))
+		(uuid "e69e2795-f34a-4843-a134-d83e003820d8")
+	)
+	(label "+15V"
+		(at 154.94000000000003 111.76 90)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "9609c3ad-75fd-4594-91ea-31af8d844f04")
+	)
+	(wire
+		(pts (xy 154.94000000000003 134.62) (xy 154.94000000000003 142.24))
+		(stroke (width 0) (type solid))
+		(uuid "3c251163-9a80-4a23-bb69-8516a4380a5f")
+	)
+	(label "-15V"
+		(at 154.94000000000003 142.24 270)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "f6c57ed0-37f3-4d0e-b3cd-77b166bdc09f")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 71.12 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "27822c7c-0ce2-4f25-b6bc-392a50086a14")
+		(pin "1" (uuid "8bf90174-a2ae-42f8-93bc-8be28c44aaca"))
+		(pin "2" (uuid "a9bc153d-25fb-4101-a9e3-df0642ad275c"))
+		(property "Reference" "C1"
+			(at 74.32000000000001 163.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "100n"
+			(at 74.32000000000001 166.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "C1") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 71.12 161.29) (xy 71.12 156.20999999999998))
+		(stroke (width 0) (type solid))
+		(uuid "196dc168-4ecd-4055-98d5-b42e159fe892")
+	)
+	(symbol
+		(lib_id "power:+15V")
+		(at 71.12 156.20999999999998 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2c28eb3a-5e41-4cb4-a944-026320543541")
+		(pin "1" (uuid "7e8dfa03-7ca4-48ac-9525-9f8df7d77834"))
+		(property "Reference" "#PWRC0"
+			(at 74.32000000000001 154.70999999999998 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "+15V"
+			(at 74.32000000000001 157.70999999999998 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRC0") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 71.12 168.91) (xy 71.12 173.99))
+		(stroke (width 0) (type solid))
+		(uuid "fed80b42-8ece-4669-82dd-1a34cfd94732")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 71.12 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "02dd06bf-ec7c-4633-a6ac-ecfc6da87001")
+		(pin "1" (uuid "31133002-4fca-44e3-abe1-824464f12fd3"))
+		(property "Reference" "#PWRG0"
+			(at 74.32000000000001 172.49 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "GND"
+			(at 74.32000000000001 175.49 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRG0") (unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 127.0 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0fab3611-bf3a-442d-a8b1-de75dd361a6e")
+		(pin "1" (uuid "6fbb1c4a-8a8f-4574-991e-04e1a8fa186a"))
+		(pin "2" (uuid "5674a02c-d0a8-4c97-8402-6c135d50ac59"))
+		(property "Reference" "C2"
+			(at 130.2 163.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "100n"
+			(at 130.2 166.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "C2") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 127.0 161.29) (xy 127.0 156.20999999999998))
+		(stroke (width 0) (type solid))
+		(uuid "315af0a1-085b-49d4-86d2-9484e515caf1")
+	)
+	(symbol
+		(lib_id "power:+15V")
+		(at 127.0 156.20999999999998 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f9a87f5-e382-40f4-8349-82e8adb66745")
+		(pin "1" (uuid "dce4c81a-59f1-4cf6-ab80-88fcbfa2deda"))
+		(property "Reference" "#PWRC1"
+			(at 130.2 154.70999999999998 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "+15V"
+			(at 130.2 157.70999999999998 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRC1") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 127.0 168.91) (xy 127.0 173.99))
+		(stroke (width 0) (type solid))
+		(uuid "1488fea2-dd7d-4d34-bccb-0b65a8d2fa44")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 127.0 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "adc3ebf5-e0b9-4107-95cc-695d9203a438")
+		(pin "1" (uuid "77844837-746a-457c-a29a-14f96480324d"))
+		(property "Reference" "#PWRG1"
+			(at 130.2 172.49 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "GND"
+			(at 130.2 175.49 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRG1") (unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 182.88 165.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2a5fbd0b-4754-4ef9-a098-2a24db0b9666")
+		(pin "1" (uuid "4ccecf0a-7f49-4838-b98f-d040db301e60"))
+		(pin "2" (uuid "1c28b19c-dd46-47d9-a694-a8bd0a3d33a6"))
+		(property "Reference" "C3"
+			(at 186.07999999999998 163.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "100n"
+			(at 186.07999999999998 166.6 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "C3") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 182.88 161.29) (xy 182.88 156.20999999999998))
+		(stroke (width 0) (type solid))
+		(uuid "8dcc8ccc-2c12-4617-ae49-ea7e1b0a440d")
+	)
+	(symbol
+		(lib_id "power:+15V")
+		(at 182.88 156.20999999999998 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "78a56d83-dc1b-4d10-b6d5-b355861bbce8")
+		(pin "1" (uuid "2cccdbec-05e6-44ef-8779-778e5259b895"))
+		(property "Reference" "#PWRC2"
+			(at 186.07999999999998 154.70999999999998 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "+15V"
+			(at 186.07999999999998 157.70999999999998 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRC2") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 182.88 168.91) (xy 182.88 173.99))
+		(stroke (width 0) (type solid))
+		(uuid "c70041f1-cd17-4401-82f5-91745648c964")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 182.88 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "93dcfc73-829d-48ed-99fc-4634a7432914")
+		(pin "1" (uuid "ba286217-20d7-4d5c-a6b0-0034f8543efe"))
+		(property "Reference" "#PWRG2"
+			(at 186.07999999999998 172.49 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "GND"
+			(at 186.07999999999998 175.49 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRG2") (unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 220.98 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a0cd7f7d-3367-4fc8-a71f-379967a40a9a")
+		(pin "1" (uuid "fbc3e7c6-ac9b-42c6-ac80-9d752b1c3d74"))
+		(pin "2" (uuid "d678dbd0-f20d-435d-8a26-98d2172c2392"))
+		(pin "3" (uuid "bcc6bbae-9841-4ec8-bdca-0e39123add16"))
+		(pin "4" (uuid "7bb1b399-cbfe-4c2b-8b3d-71a37fe0eb4f"))
+		(property "Reference" "J1"
+			(at 224.17999999999998 98.83 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "to DAQ"
+			(at 224.17999999999998 101.83 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "J1") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 215.89999999999998 97.78999999999999) (xy 205.73999999999998 97.78999999999999))
+		(stroke (width 0) (type solid))
+		(uuid "42a1fa64-8e7e-4b6b-afa2-fd370c9332ac")
+	)
+	(label "VREF"
+		(at 205.73999999999998 97.78999999999999 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "7ad2fce4-c368-4c55-a50a-c9aec74b69c5")
+	)
+	(wire
+		(pts (xy 215.89999999999998 100.33) (xy 205.73999999999998 100.33))
+		(stroke (width 0) (type solid))
+		(uuid "59ae5b40-d4be-420b-bcc4-25ffbec3dffd")
+	)
+	(label "VFB"
+		(at 205.73999999999998 100.33 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "50798e48-d6a0-4e6d-a45b-dfd2c5edace8")
+	)
+	(wire
+		(pts (xy 215.89999999999998 102.86999999999999) (xy 205.73999999999998 102.86999999999999))
+		(stroke (width 0) (type solid))
+		(uuid "bb5f56e8-81e4-40b5-81c7-acd162f3cfcc")
+	)
+	(label "VCMD"
+		(at 205.73999999999998 102.86999999999999 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "021fb354-1a84-445e-b6f5-2b75d497a790")
+	)
+	(wire
+		(pts (xy 215.89999999999998 105.41) (xy 205.73999999999998 105.41))
+		(stroke (width 0) (type solid))
+		(uuid "e166ffb1-472d-4400-8a43-3a4cd94b3a9d")
+	)
+	(label "GND"
+		(at 205.73999999999998 105.41 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "527357b1-d910-4afd-bb85-0e32f2380866")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 198.12 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1eb150ba-8985-4560-8317-e9a80f0acb09")
+		(pin "1" (uuid "4c4eeb0c-5cab-46b3-9baf-8607ffeb1dc4"))
+		(property "Reference" "#FLG0"
+			(at 201.32 49.3 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "PWR_FLAG"
+			(at 201.32 52.3 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#FLG0") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 198.12 50.8) (xy 198.12 57.15))
+		(stroke (width 0) (type solid))
+		(uuid "34b3471b-a32e-43d5-b84b-c1f46573b224")
+	)
+	(symbol
+		(lib_id "power:+15V")
+		(at 198.12 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6485f6dc-df2f-4549-8119-cab3da0270da")
+		(pin "1" (uuid "164ea033-c513-4bbc-b6cb-5cc08562e49b"))
+		(property "Reference" "#PWRF0"
+			(at 201.32 55.65 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "+15V"
+			(at 201.32 58.65 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRF0") (unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 226.06 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d332c259-e6e6-4829-b4ea-a128f0b8d2e2")
+		(pin "1" (uuid "bd37071b-0c95-49f8-af5f-5e86fe2fdd5d"))
+		(property "Reference" "#FLG1"
+			(at 229.26 49.3 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "PWR_FLAG"
+			(at 229.26 52.3 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#FLG1") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 226.06 50.8) (xy 226.06 57.15))
+		(stroke (width 0) (type solid))
+		(uuid "303a35f0-d0b3-4992-abb0-df33777127e2")
+	)
+	(symbol
+		(lib_id "power:-15V")
+		(at 226.06 57.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "12c4f15a-4f3a-4c28-a34f-28cc7f3e0824")
+		(pin "1" (uuid "10d924d4-bdb3-4a70-a564-9acc67569305"))
+		(property "Reference" "#PWRF1"
+			(at 229.26 55.65 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "-15V"
+			(at 229.26 58.65 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRF1") (unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 254.0 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1b00ac15-cb55-48e5-a91d-245c84969ed6")
+		(pin "1" (uuid "e71b9cef-b225-4a49-8d07-3870f2f85988"))
+		(property "Reference" "#FLG2"
+			(at 257.2 49.3 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "PWR_FLAG"
+			(at 257.2 52.3 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#FLG2") (unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 254.0 50.8) (xy 254.0 57.15))
+		(stroke (width 0) (type solid))
+		(uuid "afe65787-606f-44ce-8e00-fe600c62a00f")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 254.0 57.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "84537ccf-9e56-46e8-84f5-5736c9c5df75")
+		(pin "1" (uuid "00d0d6cd-bab0-4bd1-90be-def824edf741"))
+		(property "Reference" "#PWRF2"
+			(at 257.2 55.65 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "GND"
+			(at 257.2 58.65 0)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(instances
+			(project "kitticopter_controller"
+				(path "/8d76b751-53a9-40a0-9d07-3ddff3912847"
+					(reference "#PWRF2") (unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

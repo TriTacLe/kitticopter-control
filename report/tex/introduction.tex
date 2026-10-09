@@ -1,0 +1,18 @@
+\section{Introduction}\label{sec:intro}
+This lab builds a proportional controller for a simulated kitticopter and tests it on the real
+system. The kitticopter moves vertically under rotor thrust, aerodynamic drag and gravity, and
+its parameters are unique to each student, so the model cannot be taken from the brief and has
+to be measured.
+
+The work runs over two lab sessions. The first identifies the system: the hover voltage is
+found, a step test is run at the input, and the resulting response gives the plant gain $A$, the
+time constant $T$ and the sensor constant $k$. The second designs a proportional controller from
+those parameters, builds it on Veroboard from op-amp stages, and demonstrates it tracking a
+position setpoint.
+
+The controller has to track position setpoints to within $8$ percent, keep overshoot below $30$
+percent, and hold both of those in the face of $10$ percent uncertainty in the aerodynamic
+constant and $10$ percent tolerance in the components used to build it. This report derives the
+model, reports the measurements and the parameters extracted from them, shows how the gain was
+chosen against those four specifications, and evaluates what the built controller actually
+achieved.

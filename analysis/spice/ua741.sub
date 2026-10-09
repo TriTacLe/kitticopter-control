@@ -1,0 +1,10 @@
+* Behavioural UA741: open-loop gain 200k, dominant pole 5 Hz (GBW 1 MHz),
+* 2 MEG differential input resistance, output clamped near the rails.
+.subckt ua741 inp inn vcc vee out
+Rin   inp inn 2MEG
+Egain a 0 inp inn 200k
+Rp    a b 1MEG
+Cp    b 0 31.83nF
+Eout  c 0 b 0 1
+Rout  c out 75
+.ends ua741
